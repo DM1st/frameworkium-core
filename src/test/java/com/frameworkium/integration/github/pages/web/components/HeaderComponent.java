@@ -28,17 +28,6 @@ public class HeaderComponent extends HtmlElement {
     @FindBy(name = "q")
     private TextInput searchBox;
 
-    @Visible
-    @Name("Explore Link")
-    @FindBy(css = "header nav a.nav-item-explore")
-    private Link exploreLink;
-
-    @Step("Go to the explore page")
-    public ExplorePage clickExplore() {
-        exploreLink.click();
-        return PageFactory.newInstance(ExplorePage.class);
-    }
-
     @Step("Search for the text '{0}'")
     public SearchResultsPage search(String searchText) {
         searchBox.sendKeys(searchText + Keys.ENTER);

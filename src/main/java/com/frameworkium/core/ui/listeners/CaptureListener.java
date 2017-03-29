@@ -83,6 +83,26 @@ public class CaptureListener implements WebDriverEventListener, ITestListener {
     }
 
     @Override
+    public void beforeAlertAccept(WebDriver webDriver) {
+
+    }
+
+    @Override
+    public void afterAlertAccept(WebDriver webDriver) {
+
+    }
+
+    @Override
+    public void afterAlertDismiss(WebDriver webDriver) {
+
+    }
+
+    @Override
+    public void beforeAlertDismiss(WebDriver webDriver) {
+
+    }
+
+    @Override
     public void beforeNavigateTo(String url, WebDriver driver) {
         Command command = new Command("nav", "url", url);
         takeScreenshotAndSend(command, driver);
