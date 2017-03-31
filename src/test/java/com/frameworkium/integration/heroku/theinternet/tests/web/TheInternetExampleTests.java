@@ -33,7 +33,7 @@ public class TheInternetExampleTests extends BaseTest {
     }
 
     @Issue("HEROKU-3")
-    @Test(description = "Drag and Drop")
+    @Test(description = "Drag and Drop", enabled = false)
     public void dragAndDrop() {
 
         // Navigate to the checkboxes page
